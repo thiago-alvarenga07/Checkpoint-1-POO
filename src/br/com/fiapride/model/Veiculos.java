@@ -1,19 +1,19 @@
 package br.com.fiapride.model;
 
 public class Veiculos {
-	private String Nome;
-	private String Placa;
-	private int Gasolina;
+	private String nome;
+	private String placa;
+	private int gasolina;
 
 	public Veiculos(String Nome, String Placa) {
-		this.setNome(Nome);
-		this.setPlaca(Placa);
+		this.setNome(nome);
+		this.setPlaca(placa);
 		this.setGasolina(0);
 		
 	}
 	
 	public int getGasolina() {
-		return this.Gasolina;
+		return this.gasolina;
 		
 	}
 	
@@ -22,7 +22,7 @@ public class Veiculos {
 			System.out.println("Erro: Não é possivel deixar uma quantia de combustível menor que 0");
 		}
 		else {
-			this.Gasolina = valor;
+			this.gasolina = valor;
 			
 		}
 	}
@@ -31,32 +31,32 @@ public class Veiculos {
 		if(adicionar <=0) {
 			System.out.println("Erro: Não é possivel adicionar uma quantia de combustível menor ou igual a 0");
 		} else {
-			this.Gasolina += adicionar;
+			this.gasolina += adicionar;
 			
 		}
 	}		
 	
 	public void GasolinaGasta(int gasta) {
 		if(gasta > Gasolina) {
-			System.out.println("Erro: Não é possivel gastar mais gasolina do que o tanque do carro possui");
+			this.gasolina = 0;
 		} else {
-			this.Gasolina -= gasta;
+			this.gasolina -= gasta;
 			
 		}
 	}
 	
 	public String getNome() {
-		return this.Nome;
+		return this.nome;
 		
 	}
 	
 	private void setNome(String Nome) {
-		this.Nome = Nome;
+		this.nome = nome;
 		
 	}
 	
 	public String getPlaca() {
-		return this.Placa;
+		return this.placa;
 		
 	}
 	
